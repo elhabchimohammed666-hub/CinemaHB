@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  color: #f7f7f8;
+  background: #0f1014;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  background: #0f1014;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  font: inherit;
+}
+
+.nav-glass {
+  background: rgb(15 16 20 / 78%);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.mask-fade {
+  -webkit-mask-image: linear-gradient(to bottom, black 62%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 62%, transparent 100%);
+}
+
+.poster-skeleton {
+  position: relative;
+  overflow: hidden;
+}
+
+.content-row .swiper-button-prev,
+.content-row .swiper-button-next {
+  top: 44%;
+  z-index: 20;
+  width: 42px;
+  height: 72px;
+  margin-top: 0;
+  color: white;
+  background: rgb(15 16 20 / 75%);
+  backdrop-filter: blur(12px);
+  transition: background 180ms ease;
+}
+
+.content-row .swiper-button-prev:hover,
+.content-row .swiper-button-next:hover {
+  background: rgb(244 63 94 / 88%);
+}
+
+.content-row .swiper-button-prev::after,
+.content-row .swiper-button-next::after {
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.content-row .swiper-button-prev {
+  left: 0;
+  border-radius: 0 10px 10px 0;
+}
+
+.content-row .swiper-button-next {
+  right: 0;
+  border-radius: 10px 0 0 10px;
+}
+
+@media (max-width: 639px) {
+  .content-row .swiper-button-prev,
+  .content-row .swiper-button-next {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
