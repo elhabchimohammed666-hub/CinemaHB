@@ -1,3 +1,6 @@
+## License
+   © 2026 Elhabchi Mohammed. All Rights Reserved.
+
 # StreamVibe
 
 StreamVibe est un monorepo de démarrage pour une expérience de découverte de films, séries et animés. Le client React/Vite fournit une page d’accueil responsive avec carrousels, recherche locale et détails en modale. L’API Express/Mongoose fournit les premiers modèles et routes d’authentification et de catalogue.
