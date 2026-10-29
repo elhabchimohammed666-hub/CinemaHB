@@ -62,7 +62,7 @@ La liste de suivi est normalisée dans sa propre collection. L’historique est 
 - `GET /api/media/category/:category?page=1&limit=12&genre=Action&year=2025` : retourne les titres publiés, triés par note, avec pagination. Catégories permises : `film`, `series`, `anime`.
 - `POST /api/auth/register` avec `{ "name", "email", "password" }` : crée un compte et pose un cookie JWT HttpOnly.
 - `POST /api/auth/login` avec `{ "email", "password" }` : authentifie le compte.
-- `POST /api/auth/logout` : invalide le cookie côté navigateur (route protégée).
+- `POST /api/auth/logout` : invalide le cookie côté navigateur (route protégée)
 
 Le middleware JWT accepte le cookie HttpOnly ou un en-tête `Authorization: Bearer <token>`. En production, utiliser HTTPS, une clé JWT robuste, des limites de débit sur les routes d’authentification et une politique de renouvellement/révocation des sessions.
 
@@ -72,4 +72,4 @@ Ajouter les routes de recherche full-text, watchlist et historique protégées, 
 
 ## UI/UX
 
-La base emploie un fond `#0f1014`, des panneaux `#17181e` et un accent rose-rouge `#f43f5e`, complétés par une touche violette. Manrope sert aux titres et DM Sans au texte. Les affiches utilisent des squelettes animés jusqu’au chargement, les carrousels sont tactiles et navigables au clavier, et la modale se ferme à l’échap ou au clic extérieur. Les animations respectent `prefers-reduced-motion`.
+La base emploie un fond `#0f1014`, des panneaux `#17181e` et un accent rose-rouge `#f43f5e`, complétés par une touche violette. Manrope sert aux titres et DM Sans au texte. Les affiches utilisent des squelettes animés jusqu’au chargement, les carrousels sont tactiles et navigables au clavier , et la modale se ferme à l’échap ou au clic extérieur. Les animations respectent `prefers-reduced-motion`.
